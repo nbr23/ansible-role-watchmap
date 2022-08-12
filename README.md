@@ -1,7 +1,7 @@
 ansible-role-watchmap
 =========
 
-Set up smart watch tool [watchmap](https://github.com/nbr23/watchmap) to plot activity when watch is plugged to USB
+Set up smart watch tool [watchmap](https://github.com/nbr23/watchmap) to plot activity when watch is plugged to USB, legeraging `udev` rules and `systemd` oneshot services.
 
 Role Variables
 --------------
