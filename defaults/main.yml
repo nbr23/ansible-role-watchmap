@@ -1,0 +1,6 @@
+---
+# defaults file for ansible-role-watchmap
+
+watchmap_out_dir: /data/watchmap
+watchmap_user: watchmap
+watchmap_vendor_id: 091e

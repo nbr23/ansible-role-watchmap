@@ -1,0 +1,5 @@
+---
+
+- name: udev
+  command: udevadm control --reload
+  become: true

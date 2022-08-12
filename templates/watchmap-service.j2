@@ -1,0 +1,9 @@
+[Unit]
+BindTo=%i.device
+After=%i.device
+
+[Service]
+Type=oneshot
+TimeoutStartSec=3600
+User={{ watchmap_user }}
+ExecStart=/usr/local/bin/watchmap_udev_script.sh /%I

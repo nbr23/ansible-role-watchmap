@@ -1,0 +1,1 @@
+SUBSYSTEM=="block", ATTRS{idVendor}=="{{ watchmap_vendor_id }}", ACTION=="add",  PROGRAM="/usr/bin/systemd-escape -p --template=watchmap@.service $env{DEVNAME}", ENV{SYSTEMD_WANTS}+="%c"
