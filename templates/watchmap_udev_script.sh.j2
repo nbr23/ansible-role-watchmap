@@ -7,10 +7,13 @@ echo "Mounting $1 on /mnt/watchmap"
 
 sudo mount $1 /mnt/watchmap
 
-echo "Processing FIT files"
+echo "Syncing device"
 
+rsync -ap /mnt/watchmap/GARMIN {{ watchmap_out_dir }}/
+
+echo "Processing FIT files"
 export PATH=$PATH:/home/$USER/.local/bin
-find /mnt/watchmap/GARMIN/Activity/ -name '*.fit' -exec watchmap -i {} -o {{ watchmap_out_dir }} -v \;
+find {{ watchmap_out_dir }}/GARMIN/Activity/ -name '*.fit' -exec watchmap -i {} -o {{ watchmap_out_dir }} -v \;
 
 sudo umount /mnt/watchmap
 echo "Watchmap device umounted"
